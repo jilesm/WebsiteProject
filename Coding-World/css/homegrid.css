@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+     "header"
+     "sidebar"
+     "content"
+     "sidebar2"
+     "footer"
+  }

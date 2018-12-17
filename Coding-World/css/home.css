@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Here we just color the elements */
+
+.grid div:nth-child(odd) {
+  /* display: block; */
+  background-color: red;
+}
+
+.grid div:nth-child(even) {
+  /* display: block; */
+  background-color: green;
+}
+
+.grid {
+  /* Here we create the grid */
+  display: grid;
+  /* Here we define the grid columns. We can use auto, fr, %, px, etc... */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* Here we define the grid rows. IMPORTANT, if you don't know how many rows you will end up with, then just leave this one out. This will make the content adjust automatically. */
+  /* grid-template-rows: 100px 1fr 1fr auto; */
+  /* Here we decide where we want to place the grid items inside this container. The names we use for the grid itemd have been defined further down this CSS file */
+  grid-template-areas:
+    ". title title ."
+    ". header header ."
+    ". aside main."
+    ". footer footer.";
+  /* Here we can create a gap between the columns and rows. */
+  grid-gap: 20px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.header {
+  grid-area: header;
+}
+
+.aside {
+  grid-area: aside;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-areas: 
+     "header"
+     "sidebar"
+     "content"
+     "footer"
+  
+}
+ */
